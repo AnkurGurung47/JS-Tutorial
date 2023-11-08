@@ -1,4 +1,4 @@
-const accountId=12 4;
+const accountId=124;
 let accountEmail="xyz@gmail.com";
 var password='12345';
 accountCity="Dehradun" //don't do this
