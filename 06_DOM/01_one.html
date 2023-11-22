@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="weekdays">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      </div>
+</body>
+<script>
+    const parent=document.querySelector(".weekdays");
+
+    console.log(parent.children); //return html collection of its child.
+
+    parent.children[1].style.color="red"; //change color red of tuesday
+
+    console.log(parent.children[1]); //return day Tuesday
+
+    console.log("First child:",parent.firstElementChild.innerHTML); //return monday 
+
+    console.log("last child:",parent.lastElementChild.innerHTML);  // should return Friday but returning script
+
+    const dayMon=document.querySelector(".day");
+    console.log(dayMon) //monday
+
+    console.log(dayMon.parentElement) //return parent.
+
+    console.log(dayMon.nextElementSibling); //return tuesday 
+</script>
+</html>

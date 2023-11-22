@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="language">
+      <li>Python</li>
+    </div>
+  </body>
+  <script>
+    //Adding new items/element.
+
+    function addLang(lang) {
+      const addingLang = document.createElement("li");
+      addingLang.innerHTML = `${lang}`;
+      document.querySelector(".language").appendChild(addingLang);
+    }
+    addLang("Java");
+    addLang("JavaScript");
+
+    // little optimized way of doing it
+
+    function addLangOpti(lang) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(lang));
+      document.querySelector(".language").appendChild(li);
+    }
+    addLangOpti("HTML");
+
+    //Edit existing items
+
+    const langReplace = document.querySelector("li:nth-child(2)");
+    //langReplace.innerHTML="CSS";
+
+    const newLi = document.createElement("li");
+    newLi.textContent = "CSS";
+    langReplace.replaceWith(newLi);
+
+    //2nd way
+
+    const Langauge=document.querySelector("li:first-child");
+    Langauge.outerHTML='<li>TypeScript</li>'
+
+    //Remove
+    const Langauge2=document.querySelector("li:last-child");
+    Langauge2.remove()
+
+  </script>
+</html>
