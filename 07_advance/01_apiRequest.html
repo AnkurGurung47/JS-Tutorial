@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const data="https://api.github.com/users/AnkurGurung47";
+    const api=new XMLHttpRequest();
+    api.open("GET",data);
+    api.onreadystatechange=function(){
+        if(api.readyState===4){
+            console.log("completed");
+            const details=JSON.parse(this.responseText);
+            console.log(details.login);
+        }
+    }
+    api.send();
+</script>
+</html>
